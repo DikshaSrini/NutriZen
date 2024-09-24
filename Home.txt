@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriZen</title>
+  <style>
+    body {
+      background-color: #306C1C;
+      color: #333;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #D6FACA;
+      font-family: 'Bradley Hand', cursive; /* Change the font-family to Bradley Hand */
+      text-align: center;
+      margin: 20px 0;
+      font-size: 36px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-image: url("background.jpg"); /* Replace "background.jpg" with the path to your desired image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 10px 0; /* Adjust padding to fit the image size */
+    }
+
+    h4 {
+      color: #D6FACA;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-image: url("background.jpg"); /* Replace "background.jpg" with the path to your desired image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 10px 0; /* Adjust padding to fit the image size */
+    }
+
+    h2 {
+      color: #D6FACA; /* Light mint green color for the headings */
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 8px 12px;
+      border: 2px solid #333;
+      border-radius: 20px;
+    }
+
+    /* Add hover effect for navigation links */
+    nav li a:hover {
+      background-color: #008000;
+      color: #fff;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section p {
+      font-family: 'Bradley Hand', cursive;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+  <script>
+    function changeBackgroundColor() {
+      const colors = ['#7ac663', '#5ca63d', '#429922'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+
+      const links = document.querySelectorAll("nav li a");
+      for (let i = 0; i < links.length; i++) {
+        links[i].style.backgroundColor = randomColor;
+      }
+    }
+    setInterval(changeBackgroundColor, 1200);
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>NutriZen</h1>
+    <h4>Finding Balance through Nutrition</h4>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="file:///C:/Users/sdiks/OneDrive/Desktop/WDT/DietPlans.html">Personalized Diet Plans</a></li>
+      <li><a href="file:///C:/Users/sdiks/OneDrive/Desktop/WDT/WorkoutPrograms.html">Workout Programs</a></li>
+      <li><a href="file:///C:/Users/sdiks/OneDrive/Desktop/WDT/Subscription.html">Subscription to our Services</a></li>
+      <li><a href="file:///C:/Users/sdiks/OneDrive/Desktop/WDT/Contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>About NutriZen</h2>
+      <p>Welcome to <b>NutriZen</b>– your ultimate destination for a healthier and happier lifestyle. At <b>NutriZen</b>, we believe that wellness is the cornerstone of a fulfilling life. Our mission is to empower you with the knowledge and tools needed to achieve your health goals and unlock your full potential. With a team of experienced nutritionists, fitness experts, and health enthusiasts, we are committed to providing reliable and evidence-based information on all things related to health, diet, and nutrition. From personalized diet plans to effective workout programs and expert nutritional counseling, we've got you covered every step of the way. Join us on this transformative journey towards optimal well-being and discover the joy of living your best life. Together, let's nourish your body, mind, and soul for a vibrant and resilient you!</p>
+      <img src="image1.jpg" alt="Healthy Food">
+    </section>
+
+    <section>
+      <h2>Benefits of a Healthy Diet</h2>
+      <p>Adopting a healthy diet is not just about weight management; it is a powerful step towards overall well-being. A balanced and nutritious diet provides numerous benefits that impact both our physical and mental health. A healthy diet rich in fruits, vegetables, whole grains, lean proteins, and essential nutrients can boost our immune system, enhance energy levels, and promote better digestion. It can also help reduce the risk of chronic illnesses, such as heart disease, diabetes, and certain cancers. Moreover, a healthy diet plays a crucial role in maintaining healthy skin, hair, and nails, contributing to a radiant appearance. With the right combination of nutrients, a healthy diet nourishes our bodies and minds, fostering mental clarity and emotional stability. Embracing a healthy diet not only makes us feel better but also empowers us to lead a vibrant and fulfilling life.</p>
+      <img src="image2.jpg" alt="Healthy Lifestyle">
+    </section>
+
+    <section>
+      <h2>Tips for a Balanced Diet</h2>
+      <p>Maintaining a balanced diet is essential for overall well-being and vitality. Embrace a variety of colorful fruits and vegetables to ensure a spectrum of vitamins and minerals. Opt for whole grains and lean proteins to fuel your body with sustained energy. Stay hydrated by drinking plenty of water throughout the day. Limit the consumption of sugary and processed foods, and opt for healthier alternatives. Practice portion control to avoid overeating and maintain a healthy weight. By following these tips, you'll discover the joy of a well-balanced diet, promoting long-term health and supporting your journey towards a happier and healthier you. Visit our Personalized Diet Plan Webpage to choose your own customized healthy and balanced diet!</p>
+      <img src="image3.jpg" alt="Balanced Diet">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 NutriZen. All rights reserved.</p>
+<p> Diksha S </p>
+<p> Deepika Singh </p>
+<p> Siva Manohari </p>
+  </footer>
+</body>
+
+</html>

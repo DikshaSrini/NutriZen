@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Diet Plans</title>
+    <style>
+        body {
+            background-color: #306C1C;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #7ac663;
+            color: #D6FACA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #D6FACA;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            cursor: pointer; /* Add cursor pointer to indicate clickable */
+        }
+
+        .card img {
+            border-radius: 10px;
+            max-width: 100%;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease; /* Add transition for hover effect */
+        }
+
+        .card img:hover {
+            transform: scale(1.1); /* Add hover effect to scale the image on hover */
+        }
+
+        .card h2 {
+            margin: 10px 0;
+            color: #306C1C;
+        }
+
+        .card p {
+            margin: 0;
+            color: #333;
+        }
+
+        .references {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .references a {
+            text-decoration: none;
+            color: #D6FACA;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .references a:hover {
+            color: #306C1C;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Personalized Diet Plans</h1>
+        <div class="references">
+            <a href="Home.html">Home</a>
+            <a href="WorkoutPrograms.html">Workout Programs</a>
+            <a href="subscription.html">Subscription</a>
+            <a href="Contact.html">Contact Us</a></li>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <img src="recipe1.jpg" alt="Image 1">
+            <h2>Vegan Diet</h2>
+            <p>A vegan diet is a plant-based eating approach that excludes all animal products, emphasizing fruits, vegetables, grains, and legumes. It is associated with various health benefits and promotes environmental sustainability by reducing the demand for animal agriculture.</p>
+        </div>
+
+        <div class="card">
+            <img src="recipe2.jpg" alt="Image 2">
+            <h2>Ketogenic Diet</h2>
+            <p>The ketogenic diet is a low-carb, high-fat eating plan that aims to shift the body into a state of ketosis. This diet has been shown to have potential benefits for weight loss, blood sugar regulation, and improved mental clarity.</p>
+	</div>
+
+        <div class="card">
+            <img src="recipe3.jpg" alt="Image 3">
+            <h2>Raw Food Diet</h2>
+            <p>The raw food diet is a dietary approach that emphasizes consuming unprocessed and uncooked foods, such as fruits, vegetables, nuts, and seeds. Advocates believe that this diet preserves the natural enzymes and nutrients in foods, promoting better digestion and overall health.</p>
+	</div>
+    </main>
+</body>
+
+</html>

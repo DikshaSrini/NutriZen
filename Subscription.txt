@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription to Our Services</title>
+    <style>
+        body {
+            background-color: #306C1C;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #D6FACA;
+            text-align: center;
+            font-size: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 20px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        .pricing-table {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 10px;
+            border: 1px solid #7ac663;
+            font-size: 18px;
+        }
+
+        .pricing-table th {
+            background-color: #5ca63d;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .pricing-table tr:nth-child(even) {
+            background-color: #429922;
+        }
+
+        .pricing-table tr:hover {
+            background-color: #306C1C;
+        }
+
+        .pricing-info {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .subscription-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #7ac663;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .subscription-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .subscription-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #5ca63d;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 18px;
+        }
+
+        .subscription-form button {
+            background-color: #5ca63d;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Reference tags */
+        header {
+            background-color: #7ac663;
+            color: #D6FACA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .references {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .references a {
+            text-decoration: none;
+            color: #D6FACA;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .references a:hover {
+            color: #306C1C;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Reference tags -->
+    <header>
+        <div class="references">
+            <a href="Home.html">Home</a>
+            <a href="DietPlans.html">Personalized Diet Plans</a>
+            <a href="WorkoutPrograms.html">Workout Programs</a>
+            <a href="Contact.html">Contact Us</a></li>
+        </div>
+        <h1>Subscription to Our Services</h1>
+    </header>
+
+    <h2 style="text-align: center;">Choose Your Subscription Plan</h2>
+
+    <table class="pricing-table">
+        <tr style="background-color: #5ca63d; color: #fff;">
+            <th>Plan</th>
+            <th>Price (₹)</th>
+        </tr>
+        <tr>
+            <td>Vegan Diet + Cardio Blast</td>
+            <td>1500</td>
+        </tr>
+        <tr>
+            <td>Vegan Diet + Strength Training</td>
+            <td>1800</td>
+        </tr>
+        <tr>
+            <td>Vegan Diet + Yoga and Meditation</td>
+            <td>1200</td>
+        </tr>
+        <tr>
+            <td>Ketogenic Diet + Cardio Blast</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>Ketogenic Diet + Strength Training</td>
+            <td>2200</td>
+        </tr>
+        <tr>
+            <td>Ketogenic Diet + Yoga and Meditation</td>
+            <td>1700</td>
+        </tr>
+        <tr>
+            <td>Raw Food Diet + Cardio Blast</td>
+            <td>2500</td>
+        </tr>
+        <tr>
+            <td>Raw Food Diet + Strength Training</td>
+            <td>2700</td>
+        </tr>
+        <tr>
+            <td>Raw Food Diet + Yoga and Meditation</td>
+            <td>2100</td>
+        </tr>
+    </table>
+
+    <div class="subscription-form" id="subscription">
+        <div class="pricing-info" id="pricing">
+            <!-- Pricing information will be dynamically updated here -->
+        </div>
+
+        <label for="subscription-plan">Select a Subscription Plan:</label>
+        <select id="subscription-plan" onchange="updatePricing()">
+            <option value="vegan_cardio">Vegan Diet + Cardio Blast</option>
+            <option value="vegan_strength">Vegan Diet + Strength Training</option>
+            <option value="vegan_yoga">Vegan Diet + Yoga and Meditation</option>
+            <option value="keto_cardio">Ketogenic Diet + Cardio Blast</option>
+            <option value="keto_strength">Ketogenic Diet + Strength Training</option>
+            <option value="keto_yoga">Ketogenic Diet + Yoga and Meditation</option>
+            <option value="raw_cardio">Raw Food Diet + Cardio Blast</option>
+            <option value="raw_strength">Raw Food Diet + Strength Training</option>
+            <option value="raw_yoga">Raw Food Diet + Yoga and Meditation</option>
+        </select>
+
+        <button onclick="buySubscription()">Buy Subscription</button>
+    </div>
+
+    <script>
+        // Define the pricing information based on diet plan and workout regime in Rupees
+        const pricingInfo = {
+            vegan_cardio: 1500,
+            vegan_strength: 1800,
+            vegan_yoga: 1200,
+            keto_cardio: 2000,
+            keto_strength: 2200,
+            keto_yoga: 1700,
+            raw_cardio: 2500,
+            raw_strength: 2700,
+            raw_yoga: 2100,
+        };
+
+        function updatePricing() {
+            const subscriptionPlan = document.getElementById('subscription-plan').value;
+            const pricingElement = document.getElementById('pricing');
+
+            // Get the pricing based on the selected subscription plan
+            const price = pricingInfo[subscriptionPlan];
+
+            // Display the pricing information
+            pricingElement.innerText = `Price: ₹${price}`;
+        }
+
+        function buySubscription() {
+            const subscriptionPlan = document.getElementById('subscription-plan').value;
+            // You can implement the logic for processing the subscription purchase here
+            // For example, you can show a confirmation message, redirect to a payment gateway, etc.
+            alert(`You have selected: ${subscriptionPlan}. Thank you for your subscription!`);
+        }
+
+        // Initial display of pricing
+        updatePricing();
+    </script>
+</body>
+
+</html>

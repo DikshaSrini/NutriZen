@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Programs</title>
+    <style>
+        body {
+            background-color: #306C1C;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #7ac663;
+            color: #D6FACA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        section h2 {
+            color: #D6FACA; /* Light mint green color for the headings */
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        section p {
+            text-align: justify;
+        }
+
+        .references {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .references a {
+            text-decoration: none;
+            color: #D6FACA;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .references a:hover {
+            color: #306C1C;
+        }
+
+        /* New CSS styles for the hint text */
+        .hint {
+            text-align: center;
+            font-size: 16px;
+            color: #D6FACA;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .hint:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Workout Programs</h1>
+        <div class="references">
+            <a href="Home.html">Home</a>
+            <a href="DietPlans.html">Personalized Diet Plans</a>
+            <a href="subscription.html">Subscription</a>
+            <a href="Contact.html">Contact Us</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Cardio Blast</h2>
+            <img src="workout-image1.jpg" alt="Cardio Blast" onclick="showDetails('cardio-blast')">
+            <p id="cardio-blast-details" style="display: none;">Cardio Blast is a high-intensity cardio workout designed to get your heart rate up and burn calories. It includes a combination of exercises like jumping jacks, high knees, burpees, and more. This program is perfect for those looking to improve cardiovascular endurance and lose weight.</p>
+            <!-- Hint text -->
+            <p class="hint" onclick="showDetails('cardio-blast')">Click the image for more details</p>
+        </section>
+
+        <section>
+            <h2>Strength Training</h2>
+            <img src="workout-image2.jpg" alt="Strength Training" onclick="showDetails('strength-training')">
+            <p id="strength-training-details" style="display: none;">Strength Training focuses on building muscle and increasing strength. It involves using resistance through exercises like squats, lunges, push-ups, and weightlifting. This program is ideal for those who want to tone and sculpt their muscles, improve bone density, and boost metabolism.</p>
+            <!-- Hint text -->
+            <p class="hint" onclick="showDetails('strength-training')">Click the image for more details</p>
+        </section>
+
+        <section>
+            <h2>Yoga and Meditation</h2>
+            <img src="workout-image3.jpg" alt="Yoga and Meditation" onclick="showDetails('yoga-meditation')">
+            <p id="yoga-meditation-details" style="display: none;">Yoga and Meditation program aims to promote relaxation, flexibility, and mental well-being. It includes various yoga poses and breathing exercises to improve flexibility, reduce stress, and enhance mindfulness. This program is suitable for individuals seeking balance and tranquility in their fitness journey.</p>
+            <!-- Hint text -->
+            <p class="hint" onclick="showDetails('yoga-meditation')">Click the image for more details</p>
+        </section>
+    </main>
+
+    <script>
+        function showDetails(id) {
+            const detailsElement = document.getElementById(id + '-details');
+            if (detailsElement.style.display === 'none') {
+                detailsElement.style.display = 'block';
+            } else {
+                detailsElement.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
